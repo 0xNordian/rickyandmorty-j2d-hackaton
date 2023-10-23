@@ -101,7 +101,7 @@
     animation: move-clouds-back 200s linear infinite;
 }
 
-.content-ships {
+.content-rm {
     position: relative;
     z-index: 4;
 }
