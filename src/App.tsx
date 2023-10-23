@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import "./App.css";
 import FetchCharacters from "./utils/FetchCharacters";
 import { CharacterTypes } from "./types/CharacterTypes";
+import Header from "./components/header/Header";
+import GradientButton from "./components/GradientButton";
 
 type PageHandlerType = {
     type: "increase" | "decrease";
@@ -15,7 +17,7 @@ function App() {
         type === "increase"
             ? setPage((prev) => prev + 1)
             : setPage((prev) => prev - 1);
-            console.log("page: ", page)
+        console.log("page: ", page);
     };
 
     useEffect(() => {
@@ -29,28 +31,40 @@ function App() {
     console.log("characters", characters);
 
     return (
-        <div className="bg-slate-800 w-screen h-screen">
-            <h1 className="text-2xl text-white">TEST</h1>
-            {characters.map((character) => (
-                <div key={character.id}>
-                    <div className="text-white">{character.name}</div>
+        <>
+            <div className="starship-detail-container">
+                <div className="stars"></div>
+                <div className="twinkling"></div>
+                <div className="clouds"></div>
+                <div className="content-ships z-10">
+                    <Header />
+                    <GradientButton msg={"Hover"}/>
+                    {/* <div id="0" className="mt-4">
+                        {characters.map((character) => (
+                            <div key={character.id}>
+                                <div className="text-white">
+                                    {character.name}
+                                </div>
+                            </div>
+                        ))}
+                        <div className="flex gap-4 p-4">
+                            <button
+                                className="text-white border rounded-lg text-2xl px-4 py-1"
+                                onClick={() => handlePage({ type: "decrease" })}
+                            >
+                                -
+                            </button>
+                            <button
+                                className="text-white border rounded-lg text-2xl px-4 py-1"
+                                onClick={() => handlePage({ type: "increase" })}
+                            >
+                                +
+                            </button>
+                        </div>
+                    </div> */}
                 </div>
-            ))}
-            <div className="flex gap-4 p-4">
-                <button
-                    className="text-white border rounded-lg text-2xl px-3"
-                    onClick={() => handlePage({ type: "decrease" })}
-                >
-                    -
-                </button>
-                <button
-                    className="text-white border rounded-lg text-2xl px-3"
-                    onClick={() => handlePage({ type: "increase" })}
-                >
-                    +
-                </button>
             </div>
-        </div>
+        </>
     );
 }
 
