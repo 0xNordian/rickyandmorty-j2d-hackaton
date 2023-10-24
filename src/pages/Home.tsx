@@ -33,7 +33,7 @@ const Home = () => {
                         </Link>
                     </div>
                 </section>
-                <img src="/test3.png" alt="" className="w-full lg:w-[80%]" />
+                <img src="/test3.png" alt="" className="w-full" />
             </AppLayout>
         </>
     );
