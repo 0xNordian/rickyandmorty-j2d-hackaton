@@ -1,6 +1,6 @@
-@import 'tailwindcss/base';
-@import 'tailwindcss/components';
-@import 'tailwindcss/utilities';
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
 
 :root {
     font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
@@ -17,8 +17,8 @@
     -moz-osx-font-smoothing: grayscale;
     -webkit-text-size-adjust: 100%;
 
-    --rm-light-blue: #4EADC5;
-    --rm-green: #93E774;
+    --rm-light-blue: #4eadc5;
+    --rm-green: #93e774;
 }
 
 a {
@@ -32,7 +32,7 @@ a:hover {
 
 .nav-menu > div > a {
     font-weight: 500;
-    color: #B5B7B7;/*#ffe81f*/
+    color: #b5b7b7; /*#ffe81f*/
     text-decoration: inherit;
     transform: scale(1);
     transition: transform 0.25s;
@@ -43,10 +43,10 @@ a:hover {
 }
 
 body {
-  margin: 0;
-  display: grid;
-  place-items: center;
-  /* min-width: 320px;
+    margin: 0;
+    display: grid;
+    place-items: center;
+    /* min-width: 320px;
   min-height: 100vh; */
 }
 
@@ -102,4 +102,10 @@ button:focus-visible {
 .scroll-smooth {
     scroll-behavior: smooth;
     transition: all 0.4s;
+}
+
+@media (orientation: landscape) {
+    .landscape {
+        min-height: 600px;
+    }
 }

@@ -67,7 +67,7 @@ export const HeroSection = ({
         <div className="bg-transparent">
             <div
                 ref={scope}
-                className="grid h-screen w-screen grid-cols-[repeat(auto-fit,_minmax(75px,_1fr))] grid-rows-[repeat(auto-fit,_minmax(75px,_1fr))]"
+                className="grid landscape h-screen w-screen grid-cols-[repeat(auto-fit,_minmax(75px,_1fr))] grid-rows-[repeat(auto-fit,_minmax(75px,_1fr))]"
             >
                 {[...Array(size.rows * size.columns)].map((_, i) => (
                     <div
