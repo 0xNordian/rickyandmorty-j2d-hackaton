@@ -4,21 +4,24 @@ import { CardElementTypes } from "../types/CardElementTypes";
 
 const CardElements = ({ cardTitle, cardContent, cardImg }: CardElementTypes) => {
     return (
-        <div className="h-auto group relative mx-auto w-full max-w-sm overflow-hidden rounded-lg bg-slate-800 p-0.5 transition-all duration-500 hover:scale-[1.01] hover:bg-slate-800/50">
-            <div className="min-h-full relative z-10 flex flex-col items-center justify-center overflow-hidden rounded-[7px] bg-slate-900 p-8 transition-colors duration-500 group-hover:bg-slate-800">
-                <div className="h-[360px] mb-4">
+        <div className="h-full group relative mx-auto w-full max-w-sm overflow-hidden rounded-lg bg-slate-800 p-0.5 transition-all duration-500 hover:scale-[1.01] hover:bg-slate-800/50">
+            <div className="min-h-[450px] relative z-10 flex flex-col items-center justify-start overflow-hidden rounded-[7px] bg-slate-900 p-0 transition-colors duration-500 group-hover:bg-slate-800">
+                <div className="h-[350px] mb-0 w-full">
                         <img
                             src={cardImg}
                             // src="/rickandmorty-twist.png"
                             className="h-full w-full object-cover"
                         />
                 </div>
-                <h4 className="relative z-10 mb-4 w-full text-xl font-bold text-slate-50">
+                <div className="w-full h-full p-4">
+
+                <h4 className="relative z-10 w-full text-xl font-bold text-slate-50">
                     {cardTitle}
                 </h4>
                 <p className="relative z-10 text-slate-400 text-left w-full">
                     {cardContent}
                 </p>
+                </div>
             </div>
 
             <motion.div

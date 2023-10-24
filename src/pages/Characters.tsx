@@ -22,7 +22,6 @@ const Characters = () => {
         type === "increase"
             ? setPage((prev) => prev + 1)
             : setPage((prev) => prev - 1);
-        console.log("page: ", page);
     };
     return (
         <>
@@ -32,10 +31,10 @@ const Characters = () => {
                     heroContent="Click here and discover all the characters"
                     heroUrl="#charGallery"
                 />
-                <div id="charGallery" className="pointer-events-auto h-full">
-                    <div id="0" className="grid grid-cols-4 gap-6 pb-12">
+                <div id="charGallery" className="pointer-events-auto h-full w-full">
+                    <div id="0" className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-6 2xl:gap-6 pb-12 md:px-6 2xl:px-12">
                         {characters.map((character) => (
-                            <div key={character.id}>
+                            <div key={character.id} className="w-full">
                                 <CardElements
                                     cardTitle={character.name}
                                     cardContent={character.location.name}

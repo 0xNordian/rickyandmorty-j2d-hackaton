@@ -9,7 +9,7 @@ const Home = () => {
             <AppLayout>
                 <Header />
                 <section className="my-24">
-                    <div className="flex flex-col gap-6 md:flex-row md:gap-12">
+                    <div className="flex flex-col gap-6 flex-wrap items-center justify-center md:flex-row md:gap-12">
                         <Link to="/characters">
                             <Card
                                 cardType={"characters"}
