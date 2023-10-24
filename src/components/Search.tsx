@@ -7,7 +7,7 @@ type Props = {
 
 export default function Search({handleSearch}: Props) {
     return (
-        <div className="my-6 w-[90%] md:w-[95%] lg:w-[97%] xl:w-[93%] h-[240px] px-0 rounded-2xl flex justify-center items-center bg-gradient-to-tr from-rm-light-blue to-rm-green text-white shadow-lg">
+        <div className="my-6 w-full md:w-[40%] xl:w-[20%] h-auto px-0 rounded-2xl flex justify-center items-center bg-gradient-to-tr from-rm-light-blue to-rm-green text-white shadow-lg">
             <Input
                 label="Search by character name"
                 onChange={e => handleSearch(e.target.value)}
@@ -18,7 +18,7 @@ export default function Search({handleSearch}: Props) {
                     input: [
                         "bg-transparent",
                         "text-black/90 dark:text-white/90",
-                        "placeholder:text-default-700/50 dark:placeholder:text-white/60",
+                        "placeholder:text-default-700/80 dark:placeholder:text-white/60",
                     ],
                     innerWrapper: "bg-transparent",
                     inputWrapper: [

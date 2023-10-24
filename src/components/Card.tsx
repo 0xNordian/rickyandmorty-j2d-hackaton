@@ -5,8 +5,8 @@ import { CardTypes } from "../types/CardTypes";
 
 const Card = ({ cardTitle, cardType, cardContent }: CardTypes) => {
     return (
-        <div className="group relative mx-auto w-full max-w-sm overflow-hidden rounded-lg bg-slate-800 p-0.5 transition-all duration-500 hover:scale-[1.01] hover:bg-slate-800/50">
-            <div className="min-h-full relative z-10 flex flex-col items-center justify-center overflow-hidden rounded-[7px] bg-slate-900 p-8 transition-colors duration-500 group-hover:bg-slate-800">
+        <div className="border-[.5px] border-rm-light-blue group relative mx-auto w-full max-w-sm overflow-hidden rounded-lg bg-slate-800/50 p-0.5 transition-all duration-500 hover:scale-[1.01] hover:bg-slate-800/50">
+            <div className="min-h-full relative z-10 flex flex-col items-center justify-center overflow-hidden rounded-[7px] bg-slate-900/50 p-8 transition-colors duration-500 group-hover:bg-slate-800">
                 <div className="h-[360px] mb-4">
                     {cardType === "characters" ? (
                         <img

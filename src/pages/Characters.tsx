@@ -12,7 +12,9 @@ import Search from "../components/Search";
 const Characters = () => {
     const [characters, setCharacters] = useState<CharacterTypes[]>([]);
     const [page, setPage] = useState<number>(1);
-    const [filteredCharacters, setFilteredCharacters] = useState<CharacterTypes[]>([]);
+    const [filteredCharacters, setFilteredCharacters] = useState<
+        CharacterTypes[]
+    >([]);
 
     useEffect(() => {
         const fetchData = async () => {
@@ -56,10 +58,10 @@ const Characters = () => {
         );
 
         setFilteredCharacters(matchingCharacters);
-    
+
         // console.log("filteredCharacters: ", matchingCharacters);
     };
-    
+
     const filteredCharactersLength = filteredCharacters.length;
     const arr = filteredCharactersLength > 0 ? filteredCharacters : characters;
 
@@ -71,48 +73,52 @@ const Characters = () => {
                     heroContent="Click here and discover all the characters"
                     heroUrl="#charGallery"
                 />
-                <Search handleSearch={handleSearch}/>
-                <div
-                    id="charGallery"
-                    className="pointer-events-auto h-full w-full"
-                >
+                <div className="w-[90%]">
                     <div
-                        id="0"
-                        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-6 2xl:gap-6 pb-12 md:px-6 2xl:px-12"
+                        id="charGallery"
+                        className="pointer-events-auto h-full w-full"
                     >
-                        {arr.map((character, index) => (
-                            <div
-                                key={`${character.id}-${index}`}
-                                className="w-full"
-                            >
-                                <CardElements
-                                    cardTitle={character.name}
-                                    cardContent={character.location.name}
-                                    cardImg={character.image}
-                                />
-                            </div>
-                        ))}
-                    </div>
-                    <div className="flex justify-center items-center w-full">
-                        <div className="flex justify-center w-[80%]">
-                            <GradientButton>
-                                <div
-                                    className="rounded-lg text-2xl px-4 py-1"
-                                    onClick={() =>
-                                        handlePage({ type: "increase" })
-                                    }
-                                >
-                                    Load More
-                                </div>
-                            </GradientButton>
+                        <div className="flex">
+                            <Search handleSearch={handleSearch} />
                         </div>
-                        <div className="w-[4%] flex justify-center">
-                            <button
-                                className="scroll-smooth rounded-full text-2xl mr-4 px-3 py-2"
-                                onClick={handleScrollTop}
-                            >
-                                <BiArrowFromBottom />
-                            </button>
+                        <div
+                            id="0"
+                            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-6 2xl:gap-6 pb-12 "
+                        >
+                            {arr.map((character, index) => (
+                                <div
+                                    key={`${character.id}-${index}`}
+                                    className="w-full"
+                                >
+                                    <CardElements
+                                        cardTitle={character.name}
+                                        cardContent={character.location.name}
+                                        cardImg={character.image}
+                                    />
+                                </div>
+                            ))}
+                        </div>
+                        <div className="flex justify-center items-center w-full">
+                            <div className="flex justify-center w-[80%]">
+                                <GradientButton>
+                                    <div
+                                        className="rounded-lg text-2xl px-4 py-1"
+                                        onClick={() =>
+                                            handlePage({ type: "increase" })
+                                        }
+                                    >
+                                        Load More
+                                    </div>
+                                </GradientButton>
+                            </div>
+                            <div className="w-[4%] flex justify-center ml-4">
+                                <button
+                                    className="scroll-smooth rounded-full text-2xl mr-4 px-3 py-2 border border-rm-green"
+                                    onClick={handleScrollTop}
+                                >
+                                    <BiArrowFromBottom />
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
