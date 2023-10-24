@@ -7,10 +7,12 @@ import { PageHandlerType } from "../types/PageHandlerType";
 import { useEffect, useState } from "react";
 import GradientButton from "../components/GradientButton";
 import { BiArrowFromBottom } from "react-icons/bi";
+import Search from "../components/Search";
 
 const Characters = () => {
     const [characters, setCharacters] = useState<CharacterTypes[]>([]);
     const [page, setPage] = useState<number>(1);
+    const [filteredCharacters, setFilteredCharacters] = useState<CharacterTypes[]>([]);
 
     useEffect(() => {
         const fetchData = async () => {
@@ -47,6 +49,20 @@ const Characters = () => {
             window.scrollTo({ top: 0, behavior: "smooth" });
     };
 
+    const handleSearch = (str: string) => {
+        const searchTerm = str.toLowerCase();
+        const matchingCharacters = characters.filter((character) =>
+            character.name.toLowerCase().includes(searchTerm)
+        );
+
+        setFilteredCharacters(matchingCharacters);
+    
+        // console.log("filteredCharacters: ", matchingCharacters);
+    };
+    
+    const filteredCharactersLength = filteredCharacters.length;
+    const arr = filteredCharactersLength > 0 ? filteredCharacters : characters;
+
     return (
         <>
             <AppLayout>
@@ -55,6 +71,7 @@ const Characters = () => {
                     heroContent="Click here and discover all the characters"
                     heroUrl="#charGallery"
                 />
+                <Search handleSearch={handleSearch}/>
                 <div
                     id="charGallery"
                     className="pointer-events-auto h-full w-full"
@@ -63,7 +80,7 @@ const Characters = () => {
                         id="0"
                         className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-6 2xl:gap-6 pb-12 md:px-6 2xl:px-12"
                     >
-                        {characters.map((character, index) => (
+                        {arr.map((character, index) => (
                             <div
                                 key={`${character.id}-${index}`}
                                 className="w-full"
