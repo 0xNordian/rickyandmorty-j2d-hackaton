@@ -82,7 +82,11 @@ export const HeroSection = ({
             <div className="h-screen md:h-4/5 xl:h-screen pointer-events-none absolute inset-0 flex flex-col items-center justify-center p-8">
                 <div className="p-4 pointer-events-auto w-10/12 md:w-7/12 lg:w-6/12 xl:w-3/12 2xl:w-3/12">
                     <Link to="/">
-                        <img src="/public/rickymorty-header.png" alt="" className=""/>
+                        <img
+                            src="/public/rickymorty-header.png"
+                            alt=""
+                            className=""
+                        />
                     </Link>
                 </div>
                 <h1 className="text-center text-[2.3rem] font-black uppercase text-white md:text-7xl lg:text-7xl xl:text-8xl 2xl:text-[8rem]">
@@ -93,9 +97,6 @@ export const HeroSection = ({
                     className="scroll-smooth"
                     onClick={(e) => handleScrollTo(e, heroUrl || "#")}
                 >
-                    {/* <p className="pointer-events-auto mb-6 mt-4 max-w-3xl text-center text-lg font-light text-neutral-500 md:text-xl scale-[1] hover:scale-[1.2] transition-scale duration-75 hover:text-rm-light-blue">
-                        {heroContent}
-                    </p> */}
                     <BubbleText msg={heroContent} />
                 </a>
             </div>

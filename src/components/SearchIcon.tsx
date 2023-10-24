@@ -1,5 +1,10 @@
 import React from "react";
-export const SearchIcon = (props) => (
+
+type SearchIconProps = {
+  className: string;
+};
+
+export const SearchIcon: React.FC<SearchIconProps> = (props) => (
   <svg
     aria-hidden="true"
     fill="none"

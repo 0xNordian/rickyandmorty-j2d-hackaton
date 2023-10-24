@@ -5,12 +5,12 @@ type Props = {
     handleSearch: (str: string) => void;
 };
 
-export default function Search({handleSearch}: Props) {
+export default function Search({ handleSearch }: Props) {
     return (
         <div className="my-6 w-full md:w-[40%] xl:w-[20%] h-auto px-0 rounded-2xl flex justify-center items-center bg-gradient-to-tr from-rm-light-blue to-rm-green text-white shadow-lg">
             <Input
                 label="Search by character name"
-                onChange={e => handleSearch(e.target.value)}
+                onChange={(e) => handleSearch(e.target.value)}
                 isClearable
                 radius="lg"
                 classNames={{

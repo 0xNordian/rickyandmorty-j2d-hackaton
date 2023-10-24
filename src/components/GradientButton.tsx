@@ -1,8 +1,8 @@
 type GradientButtonTypes = {
     children?: React.ReactNode;
-}
+};
 
-const GradientButton = ({children}: GradientButtonTypes) => {
+const GradientButton = ({ children }: GradientButtonTypes) => {
     return (
         <div className="group relative w-fit transition-transform duration-300 active:scale-95">
             <button className="relative z-10 rounded-lg bg-gradient-to-br from-rm-light-blue to-rm-green p-0.5 duration-300 group-hover:scale-110">

@@ -1,13 +1,14 @@
+// import { FiCloudLightning } from "react-icons/fi";
 import { motion } from "framer-motion";
 import { CardElementTypes } from "../types/CardElementTypes";
 
-const CardElements = ({
+const AccordionCardElements = ({
     cardTitle,
     cardContent,
     cardImg,
 }: CardElementTypes) => {
     return (
-        <div className="h-full group relative mx-auto w-full max-w-sm overflow-hidden rounded-lg bg-slate-800 p-0.5 transition-all duration-500 hover:scale-[1.01] hover:bg-slate-800/50">
+        <div className="h-full group w-full max-w-sm overflow-hidden rounded-lg bg-slate-800 p-0.5 transition-all duration-500 hover:scale-[1.01] hover:bg-slate-800/50">
             <div className="min-h-[450px] relative z-10 flex flex-col items-center justify-start overflow-hidden rounded-[7px] bg-slate-900 p-0 transition-colors duration-500 group-hover:bg-slate-800">
                 <div className="h-[350px] mb-0 w-full">
                     <img src={cardImg} className="h-full w-full object-cover" />
@@ -37,4 +38,4 @@ const CardElements = ({
     );
 };
 
-export default CardElements;
+export default AccordionCardElements;

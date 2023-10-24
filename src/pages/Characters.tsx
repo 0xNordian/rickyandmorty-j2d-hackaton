@@ -15,7 +15,7 @@ const Characters = () => {
     const [filteredCharacters, setFilteredCharacters] = useState<
         CharacterTypes[]
     >([]);
-
+    const [arr, setArr] = useState<CharacterTypes[]>([]);
     useEffect(() => {
         const fetchData = async () => {
             if (page === 1 && characters.length === 0) {
@@ -58,12 +58,14 @@ const Characters = () => {
         );
 
         setFilteredCharacters(matchingCharacters);
-
-        // console.log("filteredCharacters: ", matchingCharacters);
+        if (str === "") {
+            setFilteredCharacters([]);
+        }
     };
 
-    const filteredCharactersLength = filteredCharacters.length;
-    const arr = filteredCharactersLength > 0 ? filteredCharacters : characters;
+    useEffect(() => {
+        setArr(filteredCharacters.length > 0 ? filteredCharacters : characters);
+    }, [filteredCharacters, characters]);
 
     return (
         <>
