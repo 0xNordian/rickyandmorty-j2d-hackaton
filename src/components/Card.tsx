@@ -28,7 +28,7 @@ const Card = ({ cardTitle, cardType, cardContent }: CardTypes) => {
                     )}
                 </div>
 
-                <h4 className="relative z-10 mb-4 w-full text-3xl font-bold text-slate-50">
+                <h4 className="relative z-10 mb-1 w-full text-3xl font-bold text-slate-50">
                     {cardTitle}
                 </h4>
                 <p className="relative z-10 text-slate-400 text-left w-full">
