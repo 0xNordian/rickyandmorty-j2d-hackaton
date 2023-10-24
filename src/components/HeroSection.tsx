@@ -83,7 +83,7 @@ export const HeroSection = ({
                 <div className="p-4 pointer-events-auto w-10/12 md:w-7/12 lg:w-6/12 xl:w-3/12 2xl:w-3/12">
                     <Link to="/">
                         <img
-                            src="/public/rickymorty-header.png"
+                            src="/rickymorty-header.png"
                             alt=""
                             className=""
                         />
