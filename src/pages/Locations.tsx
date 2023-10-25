@@ -23,7 +23,7 @@ const Locations = () => {
                     heroContent="Click here to explore the locations"
                     heroUrl="#locGallery"
                 />
-                <main id="locGallery" className="w-[90%]">
+                <main id="locGallery" className="w-[90%] xl:w-[70%] 2xl:w-[50%]">
                     {locations.map((location) => (
                         <AccordionComponent
                             key={location.id}

@@ -50,8 +50,8 @@ export default function AccordionComponent({
                 subtitle={subtitle}
                 title={title}
                 classNames={{
-                    subtitle: "text-rm-green",
-                    title: "text-rm-light-blue",
+                    subtitle: "text-rm-green text-[1rem] xl:text-2xl",
+                    title: "text-rm-light-blue text-lg xl:text-3xl",
                 }}
             >
                 <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-6 2xl:gap-6 pb-12 ">

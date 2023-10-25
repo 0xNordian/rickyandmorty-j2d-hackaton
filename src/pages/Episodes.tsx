@@ -23,7 +23,7 @@ const Episodes = () => {
                     heroContent="Click here to explore the episodes"
                     heroUrl="#epiGallery"
                 />
-                <main id="epiGallery" className="w-[90%]">
+                <main id="epiGallery" className="w-[90%] xl:w-[70%] 2xl:w-[50%]">
                     {episodes.map((episode) => (
                         <AccordionEpisodes
                             key={episode.id}

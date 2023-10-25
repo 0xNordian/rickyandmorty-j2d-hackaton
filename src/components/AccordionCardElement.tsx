@@ -32,7 +32,7 @@ const AccordionCardElements = ({
                     duration: 3.5,
                     ease: "linear",
                 }}
-                className="absolute inset-0 z-0 bg-gradient-to-br from-rm-light-blue via-indigo-200/0 to-rm-green opacity-0 transition-opacity duration-500 group-hover:opacity-100"
+                // className="absolute inset-0 z-0 bg-gradient-to-br from-rm-light-blue via-indigo-200/0 to-rm-green opacity-0 transition-opacity duration-500 group-hover:opacity-100"
             />
         </div>
     );
