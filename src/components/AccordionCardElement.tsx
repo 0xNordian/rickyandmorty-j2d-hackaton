@@ -1,4 +1,3 @@
-// import { FiCloudLightning } from "react-icons/fi";
 import { motion } from "framer-motion";
 import { CardElementTypes } from "../types/CardElementTypes";
 
