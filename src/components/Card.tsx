@@ -13,7 +13,7 @@ const Card = ({ cardTitle, cardType, cardContent }: CardTypes) => {
                         />
                     ) : cardType === "locations" ? (
                         <img
-                            src="/locations.png"
+                            src="/locations.webp"
                             className="h-full w-full object-cover"
                             style={{ objectPosition: "-100px 0px" }}
                         />

@@ -100,7 +100,7 @@ const Characters = () => {
                                 </div>
                             ))}
                         </div>
-                        <div className="flex justify-center items-center w-full">
+                        <div className="flex justify-center items-center w-full pb-24">
                             <div className="flex justify-center w-[80%]">
                                 <GradientButton>
                                     <div
