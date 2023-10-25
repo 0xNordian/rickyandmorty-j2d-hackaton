@@ -5,9 +5,9 @@ import CharacterCard from "./CharacterCard";
 import { FetchEpisodesTypes } from "../types/FetchEpisodesTypes";
 
 type AccordionComponentProps = {
-    title: string;
-    subtitle: string;
-    episode: FetchEpisodesTypes;
+    readonly title: string;
+    readonly subtitle: string;
+    readonly episode: FetchEpisodesTypes;
 };
 
 export default function AccordionEpisodes({

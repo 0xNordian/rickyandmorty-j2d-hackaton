@@ -16,7 +16,6 @@ const Episodes = () => {
     }, []);
 
     return (
-        <>
             <AppLayout>
                 <HeroSection
                     heroTitle="Episodes"
@@ -34,7 +33,6 @@ const Episodes = () => {
                     ))}
                 </main>
             </AppLayout>
-        </>
     );
 };
 

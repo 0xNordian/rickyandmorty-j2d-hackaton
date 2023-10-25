@@ -68,7 +68,6 @@ const Characters = () => {
     }, [filteredCharacters, characters]);
 
     return (
-        <>
             <AppLayout>
                 <HeroSection
                     heroTitle="Characters"
@@ -80,7 +79,7 @@ const Characters = () => {
                         id="charGallery"
                         className="pointer-events-auto h-full w-full"
                     >
-                        <div className="flex">
+                        <div className="flex 2xl:pl-8">
                             <Search handleSearch={handleSearch} />
                         </div>
                         <div
@@ -125,7 +124,6 @@ const Characters = () => {
                     </div>
                 </div>
             </AppLayout>
-        </>
     );
 };
 

@@ -14,9 +14,9 @@ type LocationTypes = {
 };
 
 type AccordionComponentProps = {
-    title: string;
-    subtitle: string;
-    location: LocationTypes;
+    readonly title: string;
+    readonly subtitle: string;
+    readonly location: LocationTypes;
 };
 
 export default function AccordionComponent({

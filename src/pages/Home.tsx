@@ -5,7 +5,6 @@ import { Link } from "react-router-dom";
 
 const Home = () => {
     return (
-        <>
             <AppLayout>
                 <Header />
                 <section className="my-24">
@@ -35,7 +34,6 @@ const Home = () => {
                 </section>
                 <img src="/test3.png" alt="" className="w-full" />
             </AppLayout>
-        </>
     );
 };
 

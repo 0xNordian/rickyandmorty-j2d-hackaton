@@ -2,14 +2,14 @@ import { Input } from "@nextui-org/react";
 import { SearchIcon } from "./SearchIcon";
 
 type Props = {
-    handleSearch: (str: string) => void;
+    readonly handleSearch: (str: string) => void;
 };
 
 export default function Search({ handleSearch }: Props) {
     return (
-        <div className="my-6 w-full md:w-[40%] xl:w-[20%] h-auto px-0 rounded-2xl flex justify-center items-center bg-gradient-to-tr from-rm-light-blue to-rm-green text-white shadow-lg">
+        <div className="my-6 w-full md:w-[55%] xl:w-[30%] h-auto px-0 rounded-2xl flex justify-center items-center bg-white text-white shadow-lg">
             <Input
-                label="Search by character name"
+                // label="Search by character name"
                 onChange={(e) => handleSearch(e.target.value)}
                 isClearable
                 radius="lg"
@@ -18,11 +18,12 @@ export default function Search({ handleSearch }: Props) {
                     input: [
                         "bg-transparent",
                         "text-black/90 dark:text-white/90",
-                        "placeholder:text-default-700/80 dark:placeholder:text-white/60",
+                        "placeholder:text-slate-800 dark:placeholder:text-white/60 text-sm md:text-lg",
                     ],
                     innerWrapper: "bg-transparent",
                     inputWrapper: [
                         "shadow-xl",
+                        "h-[50px]",
                         "bg-default-200/40",
                         "dark:bg-default/60",
                         "backdrop-blur-xl",
@@ -34,9 +35,9 @@ export default function Search({ handleSearch }: Props) {
                         "!cursor-text",
                     ],
                 }}
-                placeholder="Type to search..."
+                placeholder="Search by character name"
                 startContent={
-                    <SearchIcon className="text-black/50 dark:text-white/90 text-slate-400 pointer-events-none flex-shrink-0" />
+                    <SearchIcon className="text-slate-800 dark:text-white/90 pointer-events-none flex-shrink-0" />
                 }
             />
         </div>

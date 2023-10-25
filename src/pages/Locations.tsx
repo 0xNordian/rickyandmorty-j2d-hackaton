@@ -16,7 +16,6 @@ const Locations = () => {
     }, []);
 
     return (
-        <>
             <AppLayout>
                 <HeroSection
                     heroTitle="Locations"
@@ -34,7 +33,6 @@ const Locations = () => {
                     ))}
                 </main>
             </AppLayout>
-        </>
     );
 };
 
